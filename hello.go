@@ -8,9 +8,9 @@ const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
 
-func Hello(name string, language string) string {
+func Hello(name, language string) string {
 	if name == "" {
-		name = "World"
+		return "you left the name field empty!"
 	}
 
 	return greetingPrefix(language) + name
@@ -29,5 +29,5 @@ func greetingPrefix(language string) (prefix string) {
 }
 
 func main() {
-	fmt.Println(Hello("World!", ""))
+	fmt.Println(Hello("Chad", "Spanish"))
 }

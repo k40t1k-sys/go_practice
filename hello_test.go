@@ -8,9 +8,9 @@ func TestHello(t *testing.T) {
 		want := "Hello, Chris"
 		assertCorrecMessage(t, got, want)
 	})
-	t.Run("say 'Hello, World!' when an empty string is suplied", func(t * testing.T) {
+	t.Run("warning when an empty string is suplied", func(t * testing.T) {
 		got := Hello("", "")
-		want := "Hello, World"
+		want := "you left the name field empty!"
 		assertCorrecMessage(t, got, want)
 	})
 	t.Run("in Spanish", func(t *testing.T) {
